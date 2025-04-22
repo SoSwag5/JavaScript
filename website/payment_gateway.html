@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway - Flashy Flowers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #555;
+        }
+
+        .payment-gateway {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .payment-gateway h1 {
+            margin-bottom: 20px;
+        }
+
+        .payment-gateway p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .payment-gateway img {
+            margin-bottom: 20px;
+        }
+
+        .payment-gateway form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .payment-gateway label {
+            margin: 10px 0 5px;
+            font-size: 1em;
+            text-align: left;
+            width: 100%;
+        }
+
+        .payment-gateway input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .payment-gateway button {
+            padding: 15px 30px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .payment-gateway button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Flashy Flowers Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="payment-gateway">
+            <h1>Payment Gateway</h1>
+            <p>Please scan the QR code below or enter your credit card details to complete the payment.</p>
+            <img src="qr.png" alt="QR Code" style="width: 200px; height: 200px;">
+            <form>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+                <button type="button" onclick="completePayment()">Complete Payment</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Flashy Flowers</p>
+    </footer>
+
+    <script>
+        function completePayment() {
+            alert("Payment successful! Your order has been placed.");
+            let deliveryTime = Math.floor(Math.random() * 31) + 15;
+            alert("Your order will be delivered in " + deliveryTime + " minutes. Thanks for ordering from our shop.");
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashy Flowers - Product Detail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Flashy Flowers Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">My Account</a></li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <input type="text" placeholder="Search...">
+            <a href="cart.html"><img src="cart.png" alt="Cart"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-detail">
+            <div class="product-images">
+                <img src="flower1.jpg" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1>Product Name</h1>
+                <p>$20.00</p>
+                <p>Description of the product goes here.</p>
+                <label for="customization">Customization Options:</label>
+                <select id="customization">
+                    <option value="wrap">Gift Wrap</option>
+                    <option value="card">Personalized Card</option>
+                </select>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1">
+                <button>Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Flashy Flowers</p>
+    </footer>
+</body>
+</html>
